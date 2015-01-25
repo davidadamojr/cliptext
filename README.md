@@ -1,0 +1,1 @@
+The Cliptext chrome extension/web app creates a context menu item that converts selected text in your browser into an image that can be automatically shared on Twitter to avoid the 140 character limit.

@@ -1,5 +1,4 @@
 <?php
-//remember to set error reporting level
 $no_image = true;
 if (isset($_POST['text']) && isset($_POST['url'])){
 	require_once('lib/TextConverter.php');
@@ -58,9 +57,6 @@ if (isset($_POST['text']) && isset($_POST['url'])){
 	<?php include('footer.php'); ?>
   </div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
   <script src="bower_components/jquery/jquery.min.js"></script>
   <script src="js/jquery.simplyCountable.js"></script>
   <script type="text/javascript">

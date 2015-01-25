@@ -1,0 +1,68 @@
+/* app css stylesheet */
+.main {
+	margin-top: 15px;
+}
+
+#tweet_form {
+	margin-top: 20px;
+}
+
+.alert {
+	padding: 10px;
+	-border-radius: 5px;
+	background-color: #f1f1f1;
+	margin-top: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 a {
+	text-decoration: none;
+	color: black;
+}
+
+h1 a:hover {
+	text-decoration: none;
+	color: black;
+}	
+
+.safe {
+	color: green;
+}
+
+.over {
+	color: red;
+}
+
+#counter {
+	
+}
+
+#tweet_text {
+	margin-bottom: 0;
+}
+
+#ext_pic {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.title {
+	text-align: center;
+}
+
+.titlerow {
+	/*border-bottom: 1px solid #cccccc;*/
+	margin-bottom: 20px;
+}
+
+.footer {
+	text-align: center;
+	margin-top: 30px;
+}

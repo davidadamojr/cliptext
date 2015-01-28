@@ -56,7 +56,7 @@ if ($connection->lastHttpCode() == 200){
   <![endif]-->
   <div class="container main">
 	 <h1>Cliptext</h1>
-	 <a href="<?php echo HOME; ?>">&larr; Home</a>
+	 <a class="button button-primary" href="<?php echo HOME; ?>">&larr; Home</a>
 	 <div class="alert">
 	   <p><?php echo $message; ?></p>
 	 </div>

@@ -19,6 +19,7 @@
         <form action="clipr.php" method="POST" data-parsley-validate>
           <p>Simply type or paste what you want to share. <em>Cliptext</em> will generate an image that you can share on Twitter.</p>
 		  <input type="hidden" name="url" value="home" />
+		  <input type="hidden" name="mobile" value="true" />
           <textarea name="text" class="u-full-width" placeholder="Cliptext is awesome..." id="text" required></textarea>
 	      <input class="button-primary" type="submit" value="Generate Image" />
 		</form>

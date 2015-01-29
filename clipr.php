@@ -7,6 +7,11 @@ if (isset($_POST['text']) && isset($_POST['url'])){
 	$image_src = convert_to_image($text);
 	$no_image = false;
 	$image_hash = explode('/', explode('.', $image_src)[0])[1];
+	
+	if (isset($_POST['mobile'])){
+		session_start();
+		$_SESSION['mobile'] = "true";
+	}
 }
 ?>
 <!DOCTYPE html>
@@ -38,7 +43,7 @@ if (isset($_POST['text']) && isset($_POST['url'])){
 	 if ($no_image): ?>
 		<p>No image</p>
 	<?php else: ?>
-		<img src="<?php echo $image_src; ?>" />
+		<img class="shareimg" src="<?php echo $image_src; ?>" />
 		<form method="POST" action="auth.php" id="tweet_form">
 			<div class="row">
 				<div class="seven columns">

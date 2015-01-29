@@ -46,7 +46,7 @@ public class WebViewFragment extends Fragment {
         if (Intent.ACTION_SEND.equals(action) && type.equals("text/plain")){
             String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
             if (sharedText != null){
-                String postData = "text=" + sharedText + "&url=I think this is interesting...";
+                String postData = "text=" + sharedText + "&mobile=true&url=I think this is interesting...";
                 mWebView.postUrl(CLIPTEXT_POST, EncodingUtils.getBytes(postData, "BASE64"));
             } else {
                 mWebView.loadUrl(CLIPTEXT_HOME);

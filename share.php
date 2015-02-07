@@ -27,6 +27,7 @@ $parameters = array(
 	'media_ids' => $media->media_id_string
 );
 $result = $connection->post('statuses/update', $parameters);
+$error_state = false;
 if ($connection->lastHttpCode() == 200){
 	$message = "Your tweet and image have been posted successfully. Thank you for using Cliptext!";
 	
@@ -34,6 +35,7 @@ if ($connection->lastHttpCode() == 200){
 	unlink('./clips/' . $image_hash . '.png');
 } else {
 	$message = "There was an error posting your tweet. Please try again.";
+	$error_state = true;
 }
 ?>
 <!DOCTYPE html>
@@ -56,10 +58,13 @@ if ($connection->lastHttpCode() == 200){
   <![endif]-->
   <div class="container main">
 	 <h1>Cliptext</h1>
-	 <a class="button button-primary" href="<?php if ($_SESSION['mobile']) echo "index-android.php"; else echo HOME; ?>">&larr; Home</a>
+	 <a class="button" href="<?php if ($_SESSION['mobile']) echo "index-android.php"; else echo HOME; ?>">&larr; Home</a>
 	 <div class="alert">
 	   <p><?php echo $message; ?></p>
-	 </div>
+	 </div><br/>
+	 <?php if ($error_state): ?>
+	 <a class="button button-primary" href="auth.php?image_hash=<?php echo $image_hash; ?>&tweet_text=<?php echo urlencode($tweet_text); ?>">Try Again</a>
+	 <?php endif; ?>
 	 <?php include('footer.php'); ?>
   </div>
 </body>

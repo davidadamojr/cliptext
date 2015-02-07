@@ -7,6 +7,9 @@ session_start();
 if (isset($_POST['image_hash']) && isset($_POST['tweet_text'])){
 	$_SESSION['image_hash'] = $_POST['image_hash'];
 	$_SESSION['tweet_text'] = trim($_POST['tweet_text']);
+} else if (isset($_GET['image_hash']) && isset($_GET['tweet_text'])){
+	$_SESSION['image_hash'] = $_GET['image_hash'];
+	$_SESSION['tweet_text'] = trim(urldecode($_GET['tweet_text']));
 } else { 
 	header('Location: ' . HOME);
 }

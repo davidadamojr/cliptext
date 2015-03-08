@@ -67,12 +67,14 @@ function convert_to_image($text){
 		imagettftext($image, 15, 0, $x, $y, $black, $font, $line);
 		$y = $y + 26;
 	}
-
+	
+	/**
 	//Write "shared with clipr at the bottom"
 	$y = $y + 30;
 	$clipr_text = 'Shared with cliptext.co';
 	$clipr_font_size = 10;
 	imagettftext($image, $clipr_font_size, 0, $x, $y, $black, $font, $clipr_text);
+	**/
 
 	// Using imagepng() results in clearer text compared with imagejpeg()
 	$filename = $images_directory . md5(uniqid(rand(), true)) . '.png';
